@@ -1,5 +1,5 @@
 import NavBar from "../../component/NavBarcomponent/navbar.jsx"
-import Festival from "../../component/festival/festival.jsx"
+// import Festival from "../../component/festival/festival.jsx"
 import Background from "../../component/bgcomponent/backfestival/bgfestival.jsx"
 const Festivalpage =() =>{
 
