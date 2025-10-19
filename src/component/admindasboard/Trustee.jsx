@@ -24,7 +24,7 @@ const Volunteerview = () => {
         }
 
         try {
-            const response = await axios.get(`https://venkatesaperumal-backend.onrender.com/api/trustee?${query}`);
+            const response = await axios.get(`https://templeclone-backend.onrender.com/api/trustee?${query}`);
             setUserDetails(response.data);
             setError('');
         } catch (error) {
@@ -45,7 +45,7 @@ const Volunteerview = () => {
 
     const handleDownload = async () => {
         try {
-            const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/trustee/alluser');
+            const response = await axios.get('https://templeclone-backend.onrender.com/api/trustee/alluser');
             const filteredUsers = response.data.map(({ password, isAdmin,_id,createdAt,updatedAt,__v,  ...rest }) => rest);
 
             if (!filteredUsers || filteredUsers.length === 0) {

@@ -15,7 +15,7 @@ const NewsManager = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get("https://venkatesaperumal-backend.onrender.com/api/news");
+        const response = await axios.get("https://templeclone-backend.onrender.com/api/news");
         setNewsList(response.data);
       } catch (error) {
         setAlert({ show: true, variant: "danger", message: "Error fetching news!" });
@@ -33,15 +33,15 @@ const NewsManager = () => {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.put(`https://venkatesaperumal-backend.onrender.com/api/news/${editId}`, news);
+        await axios.put(`https://templeclone-backend.onrender.com/api/news/${editId}`, news);
         setAlert({ show: true, variant: "success", message: "News updated successfully!" });
       } else {
-        await axios.post("https://venkatesaperumal-backend.onrender.com/api/news", news);
+        await axios.post("https://templeclone-backend.onrender.com/api/news", news);
         setAlert({ show: true, variant: "success", message: "News added successfully!" });
       }
       setNews({ newsheadlines_en: "", newsheadlines_ta: "" });
       setEditId(null);
-      const response = await axios.get("https://venkatesaperumal-backend.onrender.com/api/news");
+      const response = await axios.get("https://templeclone-backend.onrender.com/api/news");
       setNewsList(response.data);
     } catch (error) {
       setAlert({ show: true, variant: "danger", message: "Error submitting news!" });
@@ -58,9 +58,9 @@ const NewsManager = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://venkatesaperumal-backend.onrender.com/api/news/${id}`);
+      await axios.delete(`https://templeclone-backend.onrender.com/api/news/${id}`);
       setAlert({ show: true, variant: "success", message: "News deleted successfully!" });
-      const response = await axios.get("https://venkatesaperumal-backend.onrender.com/api/news");
+      const response = await axios.get("https://templeclone-backend.onrender.com/api/news");
       setNewsList(response.data);
     } catch (error) {
       setAlert({ show: true, variant: "danger", message: "Error deleting news!" });

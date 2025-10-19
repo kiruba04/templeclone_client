@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const submitFeedback = async (formData) => {
   try {
-    const response = await fetch('https://venkatesaperumal-backend.onrender.com/api/feedback/submit', {
+    const response = await fetch('https://templeclone-backend.onrender.com/api/feedback/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

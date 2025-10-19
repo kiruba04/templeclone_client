@@ -19,7 +19,7 @@ function NavbarComponent() {
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
-        const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/auth/checkAuth', {
+        const response = await axios.get('https://templeclone-backend.onrender.com/api/auth/checkAuth', {
           withCredentials: true
         });
         if (response.data.auth && response.data.isLoggedIn) {
@@ -43,7 +43,7 @@ function NavbarComponent() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://venkatesaperumal-backend.onrender.com/api/auth/logout', {}, {
+      await axios.post('https://templeclone-backend.onrender.com/api/auth/logout', {}, {
         withCredentials: true
       });
 

@@ -16,7 +16,7 @@ const FeedbackCard = ({ feedback }) => {
   useEffect(() => {
     const checkResponse = async () => {
       try {
-        const res = await axios.get('https://venkatesaperumal-backend.onrender.com/api/response/all');
+        const res = await axios.get('https://templeclone-backend.onrender.com/api/response/all');
         const found = res.data.find((r) => r.feedbackId._id === feedback._id);
         if (found) {
           setHasResponse(true);
@@ -45,7 +45,7 @@ const FeedbackCard = ({ feedback }) => {
       };
 
       const res = await axios.post(
-        'https://venkatesaperumal-backend.onrender.com/api/response/send',
+        'https://templeclone-backend.onrender.com/api/response/send',
         payload
       );
 

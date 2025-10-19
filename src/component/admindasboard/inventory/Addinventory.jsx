@@ -17,17 +17,17 @@ const Addinventory = () => {
   }, []);
 
   const fetchCategories = async () => {
-    const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/categories'); // Replace with your API URL
+    const response = await axios.get('https://templeclone-backend.onrender.com/api/categories'); // Replace with your API URL
     setCategories(response.data);
   };
 
   const fetchSubCategories = async (categoryId) => {
-    const response = await axios.get(`https://venkatesaperumal-backend.onrender.com/api/subcategories/category/${categoryId}`);
+    const response = await axios.get(`https://templeclone-backend.onrender.com/api/subcategories/category/${categoryId}`);
     setSubCategories(response.data);
   };
 
   const fetchItems = async (subCategoryId) => {
-    const response = await axios.get(`https://venkatesaperumal-backend.onrender.com/api/items/subcategory/${subCategoryId}`);
+    const response = await axios.get(`https://templeclone-backend.onrender.com/api/items/subcategory/${subCategoryId}`);
     setItems(response.data);
   };
 
@@ -56,14 +56,14 @@ const Addinventory = () => {
 
     try {
       if (modalData.type === 'category') {
-        await axios.post('https://venkatesaperumal-backend.onrender.com/api/categories', { categoryName: formData.get('name') });
+        await axios.post('https://templeclone-backend.onrender.com/api/categories', { categoryName: formData.get('name') });
       } else if (modalData.type === 'subcategory') {
-        await axios.post('https://venkatesaperumal-backend.onrender.com/api/subcategories', {
+        await axios.post('https://templeclone-backend.onrender.com/api/subcategories', {
           categoryId: selectedCategory._id,
           subCategoryName: formData.get('name'),
         });
       } else if (modalData.type === 'item') {
-        await axios.post('https://venkatesaperumal-backend.onrender.com/api/items', {
+        await axios.post('https://templeclone-backend.onrender.com/api/items', {
           subCategoryId: selectedSubCategory._id,
           itemName: formData.get('name'),
         });

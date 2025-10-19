@@ -43,7 +43,7 @@ const FeedbackPage = () => {
 
   const fetchFeedback = async () => {
     try {
-      const res = await axios.get('https://venkatesaperumal-backend.onrender.com/api/feedback/all');
+      const res = await axios.get('https://templeclone-backend.onrender.com/api/feedback/all');
       const sorted = res.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       setFeedbackList(sorted);
       setFilteredList(sorted);
@@ -86,7 +86,7 @@ const FeedbackPage = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://venkatesaperumal-backend.onrender.com/api/auth/logout', {}, {
+      await axios.post('https://templeclone-backend.onrender.com/api/auth/logout', {}, {
         withCredentials: true // Ensure cookies are sent
       });
 

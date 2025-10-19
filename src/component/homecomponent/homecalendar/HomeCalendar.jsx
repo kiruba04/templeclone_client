@@ -78,7 +78,7 @@ const HomeCalendar = () => {
 
   const fetchPoojas = async () => {
     try {
-      const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/specialPoojas', {
+      const response = await axios.get('https://templeclone-backend.onrender.com/api/specialPoojas', {
         withCredentials: true
       });
       setPoojas(response.data);

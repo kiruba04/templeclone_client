@@ -10,7 +10,7 @@ const ViewAppointments = () => {
   const [endDate, setEndDate] = useState('');
 
   useEffect(() => {
-    fetchAppointments('https://venkatesaperumal-backend.onrender.com/api/register/nextfive');
+    fetchAppointments('https://templeclone-backend.onrender.com/api/register/nextfive');
   }, []);
 
   const fetchAppointments = async (url) => {
@@ -25,9 +25,9 @@ const ViewAppointments = () => {
 
   const handleFetchAppointments = () => {
     if (startDate && endDate) {
-      fetchAppointments(`https://venkatesaperumal-backend.onrender.com/api/register/range?startDate=${startDate}&endDate=${endDate}`);
+      fetchAppointments(`https://templeclone-backend.onrender.com/api/register/range?startDate=${startDate}&endDate=${endDate}`);
     } else {
-      fetchAppointments('https://venkatesaperumal-backend.onrender.com/api/register/nextfive');
+      fetchAppointments('https://templeclone-backend.onrender.com/api/register/nextfive');
     }
   };
 

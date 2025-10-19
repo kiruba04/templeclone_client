@@ -15,7 +15,7 @@ function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://venkatesaperumal-backend.onrender.com/api/auth/login', {
+      const response = await axios.post('https://templeclone-backend.onrender.com/api/auth/login', {
         phone,
         password,
       }, { withCredentials: true });

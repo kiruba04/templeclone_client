@@ -46,11 +46,11 @@ function Volunteerreg() {
       }
 
       if (location.state && location.state.userDetails) {
-        await axios.put(`https://venkatesaperumal-backend.onrender.com/api/specialdevotee/${userDetails._id}`, userDetails);
+        await axios.put(`https://templeclone-backend.onrender.com/api/specialdevotee/${userDetails._id}`, userDetails);
         
 
       } else {
-        await axios.post('https://venkatesaperumal-backend.onrender.com/api/specialdevotee/register', userDetails);
+        await axios.post('https://templeclone-backend.onrender.com/api/specialdevotee/register', userDetails);
         
       }
 

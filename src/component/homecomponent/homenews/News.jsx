@@ -11,7 +11,7 @@ const News = () => {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/news'); // Adjust the URL as needed
+                const response = await axios.get('https://templeclone-backend.onrender.com/api/news'); // Adjust the URL as needed
                 setNewsData(response.data);
             } catch (error) {
                 console.error('Error fetching news:', error);

@@ -22,7 +22,7 @@ const Uthchavam = () => {
 
   useEffect(() => {
     axios
-      .get('https://venkatesaperumal-backend.onrender.com/api/uthchavams')
+      .get('https://templeclone-backend.onrender.com/api/uthchavams')
       .then((response) => setUthchavams(response.data))
       .catch((error) => console.error('Error fetching uthchavams:', error));
   }, []);
@@ -43,10 +43,10 @@ const Uthchavam = () => {
 
   const handleUpdateUthchavam = async () => {
     try {
-      await axios.put(`https://venkatesaperumal-backend.onrender.com/api/uthchavams/${selectedUthchavam._id}`, selectedUthchavam);
+      await axios.put(`https://templeclone-backend.onrender.com/api/uthchavams/${selectedUthchavam._id}`, selectedUthchavam);
       setSuccess('Uthchavam updated successfully!');
       
-      const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/uthchavams');
+      const response = await axios.get('https://templeclone-backend.onrender.com/api/uthchavams');
       setUthchavams(response.data);
 
       setTimeout(() => {
@@ -122,8 +122,8 @@ const Uthchavam = () => {
 
   const handleCreateUthchavam = async () => {
     try {
-      await axios.post('https://venkatesaperumal-backend.onrender.com/api/uthchavams', newUthchavam);
-      const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/uthchavams');
+      await axios.post('https://templeclone-backend.onrender.com/api/uthchavams', newUthchavam);
+      const response = await axios.get('https://templeclone-backend.onrender.com/api/uthchavams');
       setUthchavams(response.data);
       setNewUthchavam({
         poojaname: '',
@@ -141,7 +141,7 @@ const Uthchavam = () => {
 
   const handleSend = async (id) => {
     try {
-      await axios.post('https://venkatesaperumal-backend.onrender.com/api/send-images', {
+      await axios.post('https://templeclone-backend.onrender.com/api/send-images', {
         uthchavamId: id,
         groupType: selectedGroups[id] || 'devotee'
       });
@@ -156,7 +156,7 @@ const Uthchavam = () => {
 
   const handleDeleteUthchavam = async (id) => {
     try {
-      await axios.delete(`https://venkatesaperumal-backend.onrender.com/api/uthchavams/${id}`);
+      await axios.delete(`https://templeclone-backend.onrender.com/api/uthchavams/${id}`);
       setUthchavams(uthchavams.filter((uthchavam) => uthchavam._id !== id));
     } catch (error) {
       console.error(error);

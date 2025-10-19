@@ -27,7 +27,7 @@ const AddEvent = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/thirukalayanam');
+      const response = await axios.get('https://templeclone-backend.onrender.com/api/thirukalayanam');
       setEvents(response.data);
     } catch (error) {
       console.error('Error fetching events', error);
@@ -36,7 +36,7 @@ const AddEvent = () => {
 
   const checkDateConflict = async (date) => {
     try {
-      const response = await axios.get(`https://venkatesaperumal-backend.onrender.com/api/thirukalayanam/getEventByDate?date=${date}`);
+      const response = await axios.get(`https://templeclone-backend.onrender.com/api/thirukalayanam/getEventByDate?date=${date}`);
       return response.data.length > 0;
     } catch (error) {
       console.error('Error checking date conflict', error);
@@ -52,7 +52,7 @@ const AddEvent = () => {
         return;
       }
 
-      const response = await axios.post('https://venkatesaperumal-backend.onrender.com/api/thirukalayanam', formData);
+      const response = await axios.post('https://templeclone-backend.onrender.com/api/thirukalayanam', formData);
       setEvents([...events, response.data]);
       resetForm();
     } catch (error) {
@@ -62,7 +62,7 @@ const AddEvent = () => {
 
   const handleEditEvent = async () => {
     try {
-      const response = await axios.put(`https://venkatesaperumal-backend.onrender.com/api/thirukalayanam/${editingEventId}`, formData);
+      const response = await axios.put(`https://templeclone-backend.onrender.com/api/thirukalayanam/${editingEventId}`, formData);
       const updatedEvents = events.map((event) =>
         event._id === editingEventId ? response.data : event
       );
@@ -75,7 +75,7 @@ const AddEvent = () => {
 
   const handleDeleteEvent = async (id) => {
     try {
-      await axios.delete(`https://venkatesaperumal-backend.onrender.com/api/thirukalayanam/${id}`);
+      await axios.delete(`https://templeclone-backend.onrender.com/api/thirukalayanam/${id}`);
       setEvents(events.filter((event) => event._id !== id));
     } catch (error) {
       console.error('Error deleting event', error);

@@ -24,7 +24,7 @@ const Devotes = () => {
         }
 
         try {
-            const response = await axios.get(`https://venkatesaperumal-backend.onrender.com/api/users?${query}`);
+            const response = await axios.get(`https://templeclone-backend.onrender.com/api/users?${query}`);
             setUserDetails(response.data);
             setError('');
         } catch (error) {
@@ -45,7 +45,7 @@ const Devotes = () => {
 
     const handleDownload = async () => {
         try {
-            const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/users/alluser'); // Fetch all users
+            const response = await axios.get('https://templeclone-backend.onrender.com/api/users/alluser'); // Fetch all users
             const users = response.data;
 
             if (!users || users.length === 0) {

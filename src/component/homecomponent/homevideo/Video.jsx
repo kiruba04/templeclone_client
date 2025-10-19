@@ -20,7 +20,7 @@ const Video = () => {
 
   useEffect(() => {
     axios
-      .get("https://venkatesaperumal-backend.onrender.com/api/uthchavams")
+      .get("https://templeclone-backend.onrender.com/api/uthchavams")
       .then((response) => {
         const currentDate = new Date();
         const filteredFestivals = response.data

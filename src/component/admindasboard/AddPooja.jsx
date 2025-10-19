@@ -30,7 +30,7 @@ const AddEvent = () => {
 
   const fetchPoojas = async () => {
     try {
-      const response = await axios.get('https://venkatesaperumal-backend.onrender.com/api/poojas', {
+      const response = await axios.get('https://templeclone-backend.onrender.com/api/poojas', {
         withCredentials: true
       });
       setPoojas(response.data);
@@ -41,7 +41,7 @@ const AddEvent = () => {
 
   const handleAddPooja = async () => {
     try {
-      const response = await axios.post('https://venkatesaperumal-backend.onrender.com/api/poojas', formData, {
+      const response = await axios.post('https://templeclone-backend.onrender.com/api/poojas', formData, {
         withCredentials: true
       });
       setPoojas([...poojas, response.data]);
@@ -53,7 +53,7 @@ const AddEvent = () => {
 
   const handleEditPooja = async () => {
     try {
-      const response = await axios.put(`https://venkatesaperumal-backend.onrender.com/api/poojas/${editingPoojaId}`, formData, {
+      const response = await axios.put(`https://templeclone-backend.onrender.com/api/poojas/${editingPoojaId}`, formData, {
         withCredentials: true
       });
       const updatedPoojas = poojas.map((pooja) =>
@@ -68,7 +68,7 @@ const AddEvent = () => {
 
   const handleDeletePooja = async (id) => {
     try {
-      await axios.delete(`https://venkatesaperumal-backend.onrender.com/api/poojas/${id}`, {
+      await axios.delete(`https://templeclone-backend.onrender.com/api/poojas/${id}`, {
         withCredentials: true
       });
       setPoojas(poojas.filter((pooja) => pooja._id !== id));

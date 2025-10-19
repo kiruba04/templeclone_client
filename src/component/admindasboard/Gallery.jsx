@@ -14,7 +14,7 @@ const Gallery = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get("https://venkatesaperumal-backend.onrender.com/api/images");
+      const response = await axios.get("https://templeclone-backend.onrender.com/api/images");
       setImages(response.data.images);
     } catch (error) {
       console.error("Error fetching images:", error);
@@ -38,7 +38,7 @@ const Gallery = () => {
 
       try {
         const response = await axios.post('https://api.cloudinary.com/v1_1/dsgdnskfj/image/upload', formData);
-        await axios.post('https://venkatesaperumal-backend.onrender.com/api/images', { url: response.data.secure_url });
+        await axios.post('https://templeclone-backend.onrender.com/api/images', { url: response.data.secure_url });
         fetchImages(); // Refresh images
         setPreview(null);
         setSelectedImage(null);
@@ -50,7 +50,7 @@ const Gallery = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://venkatesaperumal-backend.onrender.com/api/images/${id}`);
+      await axios.delete(`https://templeclone-backend.onrender.com/api/images/${id}`);
       setImages(images.filter((image) => image._id !== id));
     } catch (error) {
       console.error("Error deleting image:", error);

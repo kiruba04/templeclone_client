@@ -6,7 +6,7 @@ const Gallery = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios.get('https://venkatesaperumal-backend.onrender.com/api/images') // Ensure URL is correct
+    axios.get('https://templeclone-backend.onrender.com/api/images') // Ensure URL is correct
       .then(response => {
         if (response.data.success) {
           setImages(response.data.images); // Set the images from response

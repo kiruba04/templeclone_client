@@ -8,7 +8,7 @@ const Sidebar = ({ setView, view }) => {
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
-      await axios.post('https://venkatesaperumal-backend.onrender.com/api/auth/logout', {}, {
+      await axios.post('https://templeclone-backend.onrender.com/api/auth/logout', {}, {
         withCredentials: true // Ensure cookies are sent
       });
 

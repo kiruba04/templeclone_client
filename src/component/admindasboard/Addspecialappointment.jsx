@@ -13,7 +13,7 @@ const Addspecialappointment = () => {
   const [tokenNumber, setTokenNumber] = useState(null);
 
   useEffect(() => {
-    axios.get('https://venkatesaperumal-backend.onrender.com/api/specialPoojas')
+    axios.get('https://templeclone-backend.onrender.com/api/specialPoojas')
       .then(response => setPoojas(response.data))
       .catch(error => console.error('Error fetching poojas:', error));
   }, []);
@@ -36,7 +36,7 @@ const Addspecialappointment = () => {
 
   const handleVerifyPhone = async () => {
     try {
-      const response = await axios.get(`https://venkatesaperumal-backend.onrender.com/api/users/phone?phone=${phone}`);
+      const response = await axios.get(`https://templeclone-backend.onrender.com/api/users/phone?phone=${phone}`);
       setUserId(response.data._id);
       setError(`User name: ${response.data.username}`);
     } catch (error) {
@@ -47,7 +47,7 @@ const Addspecialappointment = () => {
 
   const handleDateChange = async (selectedDate,id,token) => {
     try {
-      const response = await axios.get(`https://venkatesaperumal-backend.onrender.com/api/specialregister/register/bydate?poojaid=${id}&date=${selectedDate}`);
+      const response = await axios.get(`https://templeclone-backend.onrender.com/api/specialregister/register/bydate?poojaid=${id}&date=${selectedDate}`);
       const existingRegistrations = response.data;
       const tokenNumber = existingRegistrations.length + 1;
       console.log(tokenNumber);
@@ -83,7 +83,7 @@ const Addspecialappointment = () => {
     };
 
     try {
-      const response = await axios.post('https://venkatesaperumal-backend.onrender.com/api/register', newRegistration);
+      const response = await axios.post('https://templeclone-backend.onrender.com/api/register', newRegistration);
       console.log(response.data);
       handleModalClose();
     } catch (error) {
