@@ -8,7 +8,7 @@ const poojapage =() =>{
 
     <NavBar />
     <Backgroundhistory/>
-    <Pooja />
+    {/* <Pooja /> */}
     
     </>
     )

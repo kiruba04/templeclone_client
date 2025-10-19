@@ -8,7 +8,7 @@ const historypage =() =>{
 
     <NavBar />
     <Backgroundhistory/>
-    <History />
+    {/* <History /> */}
     </>
     )
 

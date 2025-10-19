@@ -7,7 +7,7 @@ const Festivalpage =() =>{
     <>
     <NavBar />
     <Background/>
-    <Festival />
+    {/* <Festival /> */}
     </>
 
     )
