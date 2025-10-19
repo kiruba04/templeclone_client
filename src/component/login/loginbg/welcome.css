@@ -1,0 +1,11 @@
+.background{
+    background-image: url('https://media.istockphoto.com/id/471870535/photo/marble.webp?b=1&s=612x612&w=0&k=20&c=YasSugx2htlAKjf_ym_9kff1nHcFHLTtbjowBfL1cho=');
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; 
+    position:absolute;
+    background-attachment: fixed;
+    position:fixed;
+  }

@@ -1,0 +1,108 @@
+.feedback-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border: 1px solid #e3e6eb;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08),
+              0 12px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12),
+              0 18px 36px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.feedback-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffb671;
+}
+
+.feedback-date {
+  font-size: 14px;
+  color: #ffb671;
+}
+
+.feedback-email,
+.feedback-phone,
+.feedback-issue-date,
+.feedback-issue-place {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #495057;
+}
+
+.feedback-message {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #333;
+  background: #f3f6fb;
+  padding: 12px;
+  border-radius: 10px;
+  border-left: 4px solid #ffb671;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.respond-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: #ffb671;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s;
+}
+
+.feedback-card:hover .respond-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.respond-btn:hover {
+  background-color: #198754;
+}
+
+.respond-btn:disabled {
+  background-color: #ccc !important;
+  color: #666 !important;
+  cursor: not-allowed !important;
+}
+
+.view-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: #198754;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s;
+}
+
+.feedback-card:hover .view-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+

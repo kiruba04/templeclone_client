@@ -1,0 +1,13 @@
+
+
+.customnav{
+    border-radius: 12px;
+    border: 2px solid orange !important;
+    color: black !important;
+    font-family: "Montserrat", sans-serif;
+}
+
+.activeinventory{
+    background-color: orange !important;
+    color: white !important;
+}

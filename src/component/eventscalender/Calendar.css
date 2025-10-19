@@ -1,0 +1,135 @@
+/* Variables */
+:root {
+    --white: #fff;
+    --main: #eaedf0;
+    --accent: #0041ff;
+    --accent-2: #ebedf0;
+  }
+  
+  /* Styles */
+
+  
+  .containerclander {
+    display: inline-block;
+    background-color: var(--white);
+    border-radius: 35px;
+    padding: 0 1em;
+    margin-top: 2em;
+    position:absolute;
+    top:15%;
+    border:1px solid orange;
+    background-image: url("https://images.pexels.com/photos/1583244/pexels-photo-1583244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+  }
+  
+  header {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .header-display {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-display p {
+    color: orange;
+    margin: 5px;
+    font-size: 1.2rem;
+    word-spacing: 0.5rem;
+  }
+  
+ .arror {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: orange;
+  }
+  
+  .days,
+  .week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: auto;
+    padding: 0 20px;
+    justify-content: space-between;
+    justify-items: center;
+  }
+  
+  .week div,
+  .days div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3em;
+    border-radius: 100%;
+  }
+  
+  .days div:hover {
+    background: white;
+    color: orange !important;
+    border:1.5px solid orange;
+    cursor: pointer;
+  }
+  
+  .week div {
+    opacity: 0.5;
+  }
+  
+  .current-date {
+    background-color: orange;
+    color: var(--white) !important;
+  }
+  
+  .display-selected {
+    margin-bottom: 10px;
+    padding: 20px 20px;
+    
+  }
+  .selected{
+    text-align: center;
+  }
+
+  .cardbg{
+    border-radius: 30px;
+     background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+  }
+
+  .cardtext{
+    color:white !important;
+  }
+
+  .selected-date{
+    background-color: #00B74A;
+    color: white !important;
+  }
+
+  .title{
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid white !important;
+  }
+
+  .pooja-date {
+    color: orange;
+    font-weight: bold;
+  }
+
+  @media only screen and (min-width: 900px) and (max-width: 2560px) 
+  {
+    .containerclander{
+        width: 70%;
+        left:13%;
+        background-size:100% ;
+    }
+  }

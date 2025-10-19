@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=LXGW+WenKai+Mono+TC&family=Mooli&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Exo:ital,wght@0,100..900;1,100..900&family=LXGW+WenKai+Mono+TC&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+.sidebar {
+  display: flex;
+  flex-direction: column;/* Space between items */
+  height: 100vh;
+  background-color: #ffb671;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  width: 200px;
+   /* Adjust based on your layout */
+   font-family: "Montserrat", sans-serif;
+
+}
+
+.sidenavfont {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  color: white !important;
+}
+
+.sidenavfont.active {
+  background-color: #e9ecef;
+  color: #000 !important;
+}
+
+.logout-container{
+  position: relative;
+  margin:10%;
+
+}
+.logoutbtn{
+  width:90%;
+}

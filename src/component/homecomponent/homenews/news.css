@@ -1,0 +1,58 @@
+.containerbanner
+{
+    position:absolute;
+    top:20%;
+    left:5%;
+}
+.newscontainer {
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    top: 13%;
+    left: 10%;
+    border-radius: 12px;
+    padding:6px;
+   
+    overflow: hidden; /* Ensures content outside the container is hidden */
+}
+
+.scroll-content {
+    display: flex; /* Displays the content in a row */
+    white-space: nowrap; /* Prevents line breaks */
+    animation: scrollLeftToRight 60s linear infinite; /* Controls the scrolling animation */
+}
+
+
+/* Media query for desktop screens */
+@media (min-width: 768px) {
+    @keyframes scrollLeftToRight {
+        0% {
+            transform: translateX(180%); /* Start at 250% for desktop */
+        }
+        100% {
+            transform: translateX(-100%); /* Move completely to the left */
+        }
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    @keyframes scrollLeftToRight {
+        0% {
+            transform: translateX(50%); /* Start at the beginning for mobile */
+        }
+        100% {
+            transform: translateX(-100%); /* Move completely to the left */
+        }
+    }
+    .newscontainer{
+        left:15%;
+    }
+}
+.scroll-wrapper {
+    display: flex;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+
+

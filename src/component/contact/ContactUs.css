@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.contact-us {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  right: 5%;
+}
+
+.contacttitle {
+  margin-bottom: 20px;
+  color: orange;
+  border-bottom: 2px solid orange;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.contact-details {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+  text-align: center; /* center the text itself */
+  height: 100%; /* ensures proper vertical centering */
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-details li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.contactsubtitle {
+  font-family: "Josefin Sans", sans-serif;
+  color: orange;
+  font-size: 1.5rem;
+}
+
+.mapheader {
+  font-family: "Raleway", sans-serif;
+  color: orange;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: orange;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+.feedback-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.sidenavbar {
+  background-color: #ffb671;
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  /* Remove width or override */
+  width: 100%; /* allow Bootstrap col-md-3 to control width */
+  font-family: "Raleway", sans-serif;
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.filter-box .form-control {
+  flex: 0 0 23%; /* Similar to col-3 */
+  min-width: 160px;
+}
+
+.filter-box .btn {
+  padding: 8px 16px;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-feedback {
+  color: #999;
+  font-size: 1rem;
+  text-align: center;
+}

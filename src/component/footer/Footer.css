@@ -1,0 +1,19 @@
+.footer {
+    text-align: center;
+    background-color: #f8f9fa;
+    font-size: 14px;
+
+  }
+  
+  .footer-link {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .notextindent{
+    text-indent: 0px;
+  }

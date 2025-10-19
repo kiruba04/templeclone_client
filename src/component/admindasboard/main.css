@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=LXGW+WenKai+Mono+TC&family=Mooli&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=LXGW+WenKai+Mono+TC&family=Mooli&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Exo:ital,wght@0,100..900;1,100..900&family=LXGW+WenKai+Mono+TC&family=Mooli&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.container-fluid {
+    padding: 0;
+  }
+  
+  .p-4 {
+    padding: 20px !important;
+  }
+  
+  .subhead {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .placement{
+    margin:5px;
+  }
+  .title{
+    border-bottom :2px solid !important;
+    border-bottom-color: orange !important;
+    text-align: center;
+  }
+
+  .mr{
+
+    margin-right:15px !important;
+  }
+
+  .carddisplay
+  {
+    width:30%;
+    border-radius: 15px;
+    background-color: #F3F7EC;
+    margin-top: 30px;
+    
+  }
+  .carddetails{
+    padding-left: 10px;
+    font-family: "Raleway", sans-serif;
+   
+  }
+  .details{
+    margin:10px;
+  }
+  .line{
+    border-bottom: 2px solid #03AED2;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: "Noto Sans", sans-serif;
+  }
+
+.placebtn{
+  position: relative;
+  left: 40%;
+  margin-bottom: 15px;
+}
+
+.heading {
+  font-family: "Exo", sans-serif;
+  margin-bottom: 25px;
+  position: relative; /* Necessary for positioning the pseudo-element */
+  padding-bottom: 5px; /* Space for the border effect */
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Height of the "border" */
+  background: radial-gradient(circle at 10% 20%, rgb(255, 214, 171) 0%, rgb(255, 182, 182) 90%);
+}
+.card-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.threebtn{
+  margin: 5px;
+}
+
+.news-item{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.news-list
+{
+  transition: transform 0.3s;
+}
+
+.news-list:hover .news-item{
+  color: #FF7F38;
+
+}
+
+.news-list:hover{
+  transform: scale(1.01);
+}
+
+.model-image-container{
+  width:50%;
+}

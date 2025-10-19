@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000');
+
+.list-group-item.active {
+    background-color: orange !important;
+    color: white;
+    border-color: orange !important;
+  }
+  
+  /* Hover effect for categories */
+  .list-group-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  /*Modal effect*/
+ .modal-header{
+  background-color:#ffb671;
+  color:white;
+ }
+
+ .model-title{
+  font-family: "Nunito", serif;
+  text-align: center;
+ }

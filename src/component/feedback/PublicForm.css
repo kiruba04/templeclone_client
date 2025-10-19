@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.fb-form {            /* Full viewport height */
+  padding-top: 110px;                /* Top-bottom padding */
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.feedback-container{
+  backdrop-filter: blur(10px);              /* Applies the blur effect */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: backdrop-filter 0.3s ease;
+}
+
+.feedback {
+  color: black;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.form-align{
+    text-align: left !important;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+

@@ -1,0 +1,35 @@
+.homecontainerclander{
+
+    border-radius: 35px;
+    color:white;
+}
+
+.homecalendar{
+    border:1px solid orange;
+    background-image: url("https://images.pexels.com/photos/1583244/pexels-photo-1583244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 35px;
+    background-color: var(--white);
+    background-size: cover;
+}
+
+.nopadding{
+    padding: 0px !important;
+}
+
+.homedate{
+    color:orange;
+}
+
+@media (max-width: 768px)
+{
+    .calendar-direction{
+        flex-direction: column-reverse;
+    }
+}
+
+.home-text{
+    font-size: 1rem !important;
+}

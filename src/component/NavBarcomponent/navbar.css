@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Exo:ital,wght@0,100..900;1,100..900&family=LXGW+WenKai+Mono+TC&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Default link styles */
+.nav-link {
+  position: relative; /* Make the element relative for the ::before pseudo-element */
+  color: #000;
+  transition: color 0.3s linear; /* Smooth color transition */
+}
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+  --bs-offcanvas-width: 350px !important;
+}
+/* Add a pseudo-element for the bottom border */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Border thickness */
+  bottom: -5px; /* Position the border just below the link */
+  left: 0;
+  background-color: #ff7f38; /* Border color */
+  transition: width 0.3s ease-in-out; /* Smooth transition for the border width */
+}
+
+/* Hover effect */
+.nav-link:hover { 
+  color: #ff7f38 !important; /* Text color on hover */
+}
+
+.nav-link:hover::before {
+  width: 100%; /* Expand the border width to full on hover */
+}
+
+/* To smoothly hide the border when hover ends */
+.nav-link::before {
+  transform-origin: right;
+}
+
+.nav-link:hover::before {
+  transform-origin: left;
+}
+
+.active-link {
+  color: #ff7f38 !important;
+  border-bottom: 2px solid #ff7f38; /* Bottom border on active */
+}
+
+.custom-outline {
+    background-color: orange !important; /* Success color */
+    color: white !important;
+    border: 1px solid orange !important; /* Success color border */
+    transition: background-color 0.3s, color 0.3s !important;
+    margin-right: 10px;
+
+  }
+  
+  .custom-outline:hover {
+    background-color: white !important;
+    color: orange !important; /* Success color text */
+  }
+
+  .navwidth{
+    width: 90%;
+  }
+  .fixed-top{
+    top:4% !important; 
+    left:5% !important;
+  }
+  .hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Adjust margin to align with the toggle button */
+  }
+  
+  .hover-dropdown .dropdown-menu {
+    display: none;
+  }
+  .headerfont{
+    font-family: "Comfortaa", sans-serif;
+  }
+
+  @media only screen and (max-width: 770px) 
+  {
+    .headerfont{
+      font-size:x-small !important;
+    }
+    .fixed-top{
+      top:3% !important;
+    }
+  }
+
+
+  /*  tamil font */
+  .tamil-font {
+    font-size: small !important; /* Adjust the font size as per your requirement */
+  }
