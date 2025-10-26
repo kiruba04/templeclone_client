@@ -5,3 +5,39 @@
     max-width: 80% !important;
     max-height: 80% !important;
 }
+
+.containerbanner {
+  margin-top: 40px;
+}
+
+.headcontent {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.banner img {
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banner img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+
+  .banner{
+    padding: 0px;
+  }
+  .img-fluid{
+    margin-left:0px;
+    margin-bottom: 0px;
+  }
+}

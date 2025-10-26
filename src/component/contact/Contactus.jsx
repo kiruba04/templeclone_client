@@ -30,7 +30,7 @@ const ContactUs = () => {
             <h3 className='mapheader'>Find Us on the Map:</h3>
             <iframe
               title="Temple Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.161313646476!2d77.16382871440668!3d11.294378292076524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8e25be1afb1c3%3A0x154afd8e679d3192!2sSri%20Venkatesa%20Perumal%20Temple!5e0!3m2!1sen!2sin!4v1695147851776!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sri%20Nanaammadevi%20Vijayanarayana%20Choedralu%20Devasthanam+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}

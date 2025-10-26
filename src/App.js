@@ -14,7 +14,6 @@ import Volunteer from './pages/volunteer/volunteerpage';
 import Special from './pages/special/special';
 import Trustee from './pages/Trustee/trustee';
 
-import Historypage from './pages/historypage/Historypage';
 import Gallerpage from './pages/gallery/gallery'
 import Poojapage from './pages/poojapage/poojapage';
 import Festivalpage from './pages/festivalpage/Festivalpage';
@@ -26,7 +25,6 @@ import Feedbackreview from './pages/feedbackreview/feedbackreview';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
-   <>
        <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -37,8 +35,6 @@ function App() {
         <Route path="/addvounteer" element ={<Volunteer/>}/>
         <Route path="/addspecialdevotee" element ={<Special/>}/>
         <Route path="/addtrustee" element ={<Trustee/>}/>
-
-        <Route path="/history" element ={<Historypage />} />
         <Route path="/gallery" element={<Gallerpage/>}/>
         <Route path='/pooja' element={<Poojapage/>}/>
         <Route path='/festival' element={<Festivalpage/>}/>
@@ -48,7 +44,6 @@ function App() {
         <Route path="/feedbackreview" element={<Feedbackreview/>}/>
       </Routes>
     </BrowserRouter>
-   </>
   )
 }
 

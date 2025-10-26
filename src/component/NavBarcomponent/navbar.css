@@ -90,4 +90,20 @@
   /*  tamil font */
   .tamil-font {
     font-size: small !important; /* Adjust the font size as per your requirement */
+    line-height: 1.4;
   }
+
+.text-center {
+  text-align: center;
+  white-space: normal;
+}
+
+.offcanvas-title {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.eng-font{
+    font-size: medium !important; /* Adjust the font size as per your requirement */
+    line-height: 1.4;
+}

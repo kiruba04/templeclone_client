@@ -1,14 +1,14 @@
 .containerbanner
 {
     position:absolute;
-    top:20%;
+    top:22%;
     left:5%;
 }
 .newscontainer {
     position: absolute;
     background-color: white;
     width: 80%;
-    top: 13%;
+    top: 15%;
     left: 10%;
     border-radius: 12px;
     padding:6px;

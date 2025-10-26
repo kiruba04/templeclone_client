@@ -74,13 +74,66 @@ function NavbarComponent() {
   // Check if current language is Tamil
   const isTamil = i18n.language === 'ta';
 
+  // Helper: nav items to render
+  const navItems = [
+    { path: '/', key: 'home' },
+    { path: '/event', key: 'event' },
+    { path: '/gallery', key: 'gallery' },
+    { path: '/festival', key: 'festival' },
+    { path: '/pooja', key: 'pooja' },
+    { path: '/contact', key: 'contact' },
+    { path: '/feedback', key: 'feedback' }
+  ];
+
+  // Helper: determine dashboard path for user
+  const getDashboardPath = (user) => {
+    if (!user) return '/dashboard';
+    if (user.isAdmin) return '/admin';
+    if (user.userType === 'trustee') return '/feedbackreview';
+    return '/dashboard';
+  };
+
+  // Helper: render user controls (login/signup or user link + logout)
+  const renderUserControls = () => {
+    if (isLoggedIn && storedUser) {
+      const displayName = storedUser.username
+        ? (storedUser.username.length > 5 ? `${storedUser.username.substring(0, 5)}..` : storedUser.username)
+        : 'User';
+      return (
+        <>
+          <Nav.Link href={getDashboardPath(storedUser)}>{displayName}</Nav.Link>
+          <Button variant="outline-danger" onClick={handleLogout}>{t('logout')}</Button>
+        </>
+      );
+    }
+
+    return (
+      <>
+        <Button className="custom-outline" onClick={handleLogin}>{t('login')}</Button>
+        <Button className="custom-outline" onClick={handleSignUp}>{t('signup')}</Button>
+      </>
+    );
+  };
+
   return (
     <>
       {['lg'].map((expand) => (
         <Navbar key={expand} expand={expand} bg="light" className={`mb-3 navwidth fixed-top ${isTamil ? 'tamil-font' : ''}`}>
           <Container fluid>
-            <Navbar.Brand href="/" className={`headerfont ${isTamil ? 'tamil-font' : ''}`}>
-              {t('templeName')}
+            <Navbar.Brand href="/" className={`headerfont ${isTamil ? 'tamil-font' : 'eng-font'}`}>
+              {isTamil ? (
+              <>
+                ஸ்ரீ நனம்மதேவி,
+                <br />
+                ஸ்ரீ விஜயநாராயண சௌதரல்லு கோயில்
+              </>
+            ) : (
+              <>
+                Sri Nanammadevi,
+                <br />
+                Sri Vijayanarayana Saudharallu Temple
+              </>
+            )}
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -89,44 +142,34 @@ function NavbarComponent() {
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className={isTamil ? 'tamil-font' : ''}>
-                  {t('templeName')}
-                </Offcanvas.Title>
+                          <Offcanvas.Title 
+            id={`offcanvasNavbarLabel-expand-${expand}`} 
+            className={isTamil ? 'tamil-font text-center' : 'text-center'}
+          >
+            {isTamil ? (
+              <>
+                ஸ்ரீ நனம்மதேவி,
+                <br />
+                ஸ்ரீ விஜயநாராயண சௌதரல்லு கோயில்
+              </>
+            ) : (
+              <>
+                Sri Nanammadevi,
+                <br />
+                Sri Vijayanarayana Saudharallu Temple
+              </>
+            )}
+          </Offcanvas.Title>
+
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className={`justify-content-center flex-grow-1 pe-3 d-flex gap-3 ${isTamil ? 'tamil-font' : ''}`}>
-                  <Nav.Link href="/" className={location.pathname === '/' ? 'active-link' : ''}>{t('home')}</Nav.Link>
-                  <Nav.Link href="/history" className={location.pathname === '/history' ? 'active-link' : ''}>{t('history')}</Nav.Link>
-                  <Nav.Link href="/event" className={location.pathname ==='/event' ? 'active-link' :''}>{t('event')}</Nav.Link>
-                  <Nav.Link href="/gallery" className={location.pathname === '/gallery' ? 'active-link' : ''}>{t('gallery')}</Nav.Link>
-                  <Nav.Link href="/festival" className={location.pathname === '/festival' ? 'active-link' : ''}>{t('festival')}</Nav.Link>
-                  <Nav.Link href="/pooja" className={location.pathname === '/pooja' ? 'active-link' : ''}>{t('pooja')}</Nav.Link>
-                  <Nav.Link href="/contact" className={location.pathname === '/contact' ? 'active-link' : ''}>{t('contact')}</Nav.Link>
-                  <Nav.Link href="/feedback" className={location.pathname === '/feedback' ? 'active-link' : ''}>{t('feedback')}</Nav.Link>
-                  {isLoggedIn && storedUser ? (
-                    <>
-                     <Nav.Link 
-                        href={
-                          storedUser.isAdmin 
-                            ? '/admin' 
-                            : storedUser.userType === 'trustee' 
-                              ? '/feedbackreview' 
-                              : '/dashboard'
-                        }
-                      >
-                        {storedUser.username.length > 5 
-                          ? `${storedUser.username.substring(0, 5)}..` 
-                          : storedUser.username}
-                      </Nav.Link>
-
-                      <Button variant="outline-danger" onClick={handleLogout}>{t('logout')}</Button>
-                    </>
-                  ) : (
-                    <>
-                      <Button className="custom-outline" onClick={handleLogin}>{t('login')}</Button>
-                      <Button className="custom-outline" onClick={handleSignUp}>{t('signup')}</Button>
-                    </>
-                  )}
+                  {navItems.map((item) => (
+                    <Nav.Link key={item.path} href={item.path} className={location.pathname === item.path ? 'active-link' : ''}>
+                      {t(item.key)}
+                    </Nav.Link>
+                  ))}
+                  {renderUserControls()}
                 </Nav>
                 <Nav className='justify-content-end'>
                   <Nav.Link onClick={() => changeLanguage('en')}>English</Nav.Link>

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, Modal, Form, Alert,Row,Col } from 'react-bootstrap';
-import axios from 'axios';
 import './main.css';
 import Addspecial from './Addspecialappointment';
+
+import axios from '../../utils/api/axios';
 
 const AddAppointment = () => {
   const [poojas, setPoojas] = useState([]);
@@ -19,7 +20,7 @@ const AddAppointment = () => {
   const [totalToken, setTotalToken] = useState('');
 
   useEffect(() => {
-    axios.get('https://templeclone-backend.onrender.com/api/poojas')
+    axios.get('/poojas')
       .then(response => setPoojas(response.data))
       .catch(error => console.error('Error fetching poojas:', error));
   }, []);
@@ -44,7 +45,7 @@ const AddAppointment = () => {
 
   const handleVerifyPhone = async () => {
     try {
-      const response = await axios.get(`https://templeclone-backend.onrender.com/api/users/phone?phone=${phone}`);
+      const response = await axios.get(`/users/phone?phone=${phone}`);
       setUserId(response.data._id);
       setError(`User name :${response.data.username}`);
         
@@ -84,7 +85,7 @@ const AddAppointment = () => {
       setTotalToken(dayInfo.availaableslots);
       
       try {
-        const response = await axios.get(`https://templeclone-backend.onrender.com/api/register/bydate?poojaid=${selectedPooja._id}&date=${selectedDate}`);
+        const response = await axios.get(`/register/bydate?poojaid=${selectedPooja._id}&date=${selectedDate}`);
         const existingRegistrations = response.data;
         const tokenNumber = existingRegistrations.length + 1;
 
@@ -125,7 +126,7 @@ const AddAppointment = () => {
     };
 
     try {
-      const response = await axios.post('https://templeclone-backend.onrender.com/api/register', newRegistration);
+      const response = await axios.post('/register', newRegistration);
       console.log(response.data);
       handleModalClose();
     } catch (error) {

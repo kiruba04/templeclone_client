@@ -48,10 +48,10 @@ const VideoCarousel = () => {
         <section className="customer-logos">
           <Slider {...settings}>
             {[
-              "https://www.youtube.com/embed/bSPhXsxh_1o",
-              "https://www.youtube.com/embed/GxPoIVcl7AM",
-              "https://www.youtube.com/embed/5LrSab9ybaU",
-              "https://www.youtube.com/embed/wFqG_LLin5c",
+              "https://www.youtube.com/embed/JLnycPtolfw?si=Z5xBcDYk8TWUNrif",
+              "https://www.youtube.com/embed/JLnycPtolfw?si=Z5xBcDYk8TWUNrif",
+              "https://www.youtube.com/embed/JLnycPtolfw?si=Z5xBcDYk8TWUNrif",
+              "https://www.youtube.com/embed/JLnycPtolfw?si=Z5xBcDYk8TWUNrif",
             ].map((videoSrc, index) => (
               <div className="slide" key={index}>
                 <div

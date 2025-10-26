@@ -85,7 +85,7 @@ const Video = () => {
           <div className="col-md-6">
             <iframe
               className="videoplayer"
-              src="https://www.youtube.com/embed/Cvwua8a89LY?si=M9DST4lqYFtMbwBl"
+              src="https://www.youtube.com/embed/JLnycPtolfw?si=Z5xBcDYk8TWUNrif"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
