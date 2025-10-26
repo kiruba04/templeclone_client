@@ -1,5 +1,5 @@
 
-@media (min-width: 426px) {
+@media (max-width: 426px) {
   .modal-backdrop {
     width: 110vh !important;
     height: 110vh !important;
