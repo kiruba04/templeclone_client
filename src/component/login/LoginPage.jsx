@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import axios from '../../utils/api/axios';
+
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
 import Button from 'react-bootstrap/Button';
@@ -15,7 +16,7 @@ function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/auth/login', {
+      const response = await axios.post('https://templeclone-backend.onrender.com/api/auth/login', {
         phone,
         password,
       }, { withCredentials: true });
