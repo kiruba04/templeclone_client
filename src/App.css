@@ -1,13 +1,7 @@
 
-.modal-backdrop {
-  width: 110vh !important;
-  height: 110vh !important;
-}
-
-/* 🖥️ For laptops (typical screen width 1024px–1440px): reset to normal */
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 426px) {
   .modal-backdrop {
-    width: 100% !important;
-    height: 100% !important;
+    width: 110vh !important;
+    height: 110vh !important;
   }
 }
