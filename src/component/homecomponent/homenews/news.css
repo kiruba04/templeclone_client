@@ -1,7 +1,7 @@
 .containerbanner
 {
     position:absolute;
-    top:22%;
+    top:24%;
     left:5%;
 }
 .newscontainer {
@@ -12,7 +12,6 @@
     left: 10%;
     border-radius: 12px;
     padding:6px;
-   
     overflow: hidden; /* Ensures content outside the container is hidden */
 }
 
