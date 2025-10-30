@@ -79,8 +79,7 @@ function NavbarComponent() {
     { path: '/', key: 'home' },
     { path: '/event', key: 'event' },
     { path: '/gallery', key: 'gallery' },
-    { path: '/festival', key: 'festival' },
-    { path: '/pooja', key: 'pooja' },
+    { path: '/pooja', key: 'Pooja Registeration and Donations' },
     { path: '/contact', key: 'contact' },
     { path: '/feedback', key: 'feedback' }
   ];
