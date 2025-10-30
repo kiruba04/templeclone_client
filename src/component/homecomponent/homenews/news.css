@@ -5,10 +5,11 @@
     left:5%;
 }
 .newscontainer {
+
     position: absolute;
     background-color: white;
     width: 80%;
-    top: 15%;
+    top: 17%;
     left: 10%;
     border-radius: 12px;
     padding:6px;

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './news.css';
 
 const News = () => {
-    const [newsData, setNewsData] = useState([]);
+    const [newsData, setNewsData] = useState([]); 
     // eslint-disable-next-line
     const { t, i18n } = useTranslation(); // useTranslation hook
 

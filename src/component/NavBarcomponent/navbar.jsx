@@ -9,6 +9,7 @@ import axios from "axios";
 import { useTranslation } from 'react-i18next'; // Import useTranslation
 import './navbar.css';
 
+
 function NavbarComponent() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [storedUser, setStoredUser] = useState(null);
