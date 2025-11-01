@@ -6,7 +6,7 @@ import './news.css';
 const News = () => {
     const [newsData, setNewsData] = useState([]);
     const scrollRef = useRef(null);
-    const { t, i18n } = useTranslation(); // eslint-disable-next-line
+    const { i18n } = useTranslation(); // eslint-disable-next-line
 
     useEffect(() => {
         const fetchNews = async () => {
