@@ -107,3 +107,12 @@
     font-size: medium !important; /* Adjust the font size as per your requirement */
     line-height: 1.4;
 }
+
+/* Responsive adjustments */
+/* Adjust font sizes and spacing for smaller screens */
+@media (max-width: 767px) {
+  .eng-font
+  {
+    font-size: small !important;
+  }
+}
