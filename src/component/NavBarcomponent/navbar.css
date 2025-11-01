@@ -113,6 +113,9 @@
 @media (max-width: 767px) {
   .eng-font
   {
-    font-size: small !important;
+    font-size: x-small !important;
+  }
+  .tamil-font{
+    font-size: x-small !important;
   }
 }

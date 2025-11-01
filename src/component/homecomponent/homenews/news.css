@@ -43,4 +43,7 @@
     .newscontainer {
         width: 90%;
     }
+    .newscontainer{
+        top:15%;
+    }
 }
