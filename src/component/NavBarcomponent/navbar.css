@@ -110,7 +110,7 @@
 
 /* Responsive adjustments */
 /* Adjust font sizes and spacing for smaller screens */
-@media (max-width: 767px) {
+@media (max-width: 1424px) {
   .eng-font
   {
     font-size: x-small !important;
@@ -120,8 +120,8 @@
   }
 }
 
-/* Adjust only for 1024px width screens */
-@media (max-width: 1024px) and (min-width: 768px) {
+/* Adjust only for 1424px width screens */
+@media (max-width: 1424px) and (min-width: 768px) {
   .eng-font {
     font-size: small !important;
   }
