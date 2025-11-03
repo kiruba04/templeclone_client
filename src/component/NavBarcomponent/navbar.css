@@ -123,14 +123,15 @@
 /* Adjust only for 1424px width screens */
 @media (max-width: 1424px) and (min-width: 768px) {
   .eng-font {
-    font-size: small !important;
+    font-size: x-small !important;
   }
   .tamil-font {
-    font-size: small !important;
+    font-size: x-small !important;
   }
   
   .navwidth{
-    width: 100%;
-  }
+    width: 98%;
+    left:1% !important;
+    }
 
 }
