@@ -13,7 +13,7 @@ import Admin from "./pages/admin/admin";
 import Volunteer from './pages/volunteer/volunteerpage';
 import Special from './pages/special/special';
 import Trustee from './pages/Trustee/trustee';
-
+import History from './pages/historypage/Historypage';
 import Gallerpage from './pages/gallery/gallery'
 import Poojapage from './pages/poojapage/poojapage';
 import Festivalpage from './pages/festivalpage/Festivalpage';
@@ -42,6 +42,8 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path="/feedback" element={<Feedback/>}/>
         <Route path="/feedbackreview" element={<Feedbackreview/>}/>
+        <Route path="/history" element={<History/>}/>
+        
       </Routes>
     </BrowserRouter>
   )

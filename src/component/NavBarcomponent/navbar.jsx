@@ -80,9 +80,12 @@ function NavbarComponent() {
     { path: '/', key: 'home' },
     { path: '/event', key: 'event' },
     { path: '/gallery', key: 'gallery' },
-    { path: '/pooja', key: 'Pooja Registeration and Donations' },
+    { path: '/pooja', key: 'Pooja Register and Donations' },
+    { path: '/history' , key: 'history' },
     { path: '/contact', key: 'contact' },
-    { path: '/feedback', key: 'feedback' }
+    { path: '/feedback', key: 'feedback' },
+    
+
   ];
 
   // Helper: determine dashboard path for user

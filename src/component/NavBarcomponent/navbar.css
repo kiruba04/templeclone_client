@@ -119,3 +119,18 @@
     font-size: x-small !important;
   }
 }
+
+/* Adjust only for 1024px width screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .eng-font {
+    font-size: small !important;
+  }
+  .tamil-font {
+    font-size: small !important;
+  }
+  
+  .navwidth{
+    width: 100%;
+  }
+
+}
