@@ -1,26 +1,75 @@
 
-/* Default states for paragraphs and headings before animation */
-.para1, .para2, .para3, .para4, .para5,.para6, .headcontent1 {
-    opacity: 0;
-    transform: translateY(20px); /* Start with a slight translation down */
-    transition: opacity 1s ease-out, transform 1s ease-out;
+  .containerhistory
+  {
+    position:absolute;
+    top:20%;
+    left:5%;
   }
-  
-  /* Animate class that gets added when element is in view */
-  .animate {
-    opacity: 1;
-    transform: translateY(0); /* Bring it to its original position */
+
+  .history-accordion{
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
-  
- .line2 {
-    width: 0%;
-    height: 5px; /* Height of the border */
-    background: linear-gradient(262deg, rgb(255, 127, 56) 0%, rgb(255, 196, 108) 100%);
-    transition: width 1.5s ease;
-  }
-  
-  /* Animate line width when it's visible */
- .line2.animate {
-    width: 100%;
-  }
-  
+
+/* title */
+.history-title {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem !important;
+  font-family: "Nunito", sans-serif;
+}
+
+/* accordion spacing */
+.history-accordion .accordion-item {
+  border: none; /* optional: hide default borders */
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* default header style */
+.history-accordion .accordion-button {
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* selected / expanded header -> orange background */
+.history-accordion .accordion-button:not(.collapsed) {
+  background-color: #ff8c1a; /* orange */
+  color: #fff; /* ensure readable text */
+  box-shadow: none;
+}
+
+/* expand/collapse icon color (chevron) when selected */
+.history-accordion .accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1); /* ensures the chevron is visible on dark bg */
+}
+
+/* body when expanded - light orange background */
+.history-accordion .accordion-item .accordion-collapse .accordion-body {
+  background-color: #fff3e6; /* light orange */
+  color: #222;
+  border: 1px solid rgba(0,0,0,0.04);
+  padding: 1rem 1.25rem;
+}
+
+/* paragraph inside */
+.history-content {
+  white-space: pre-line;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left !important;
+}
+
+/* Tamil font class (you already use similar elsewhere) */
+.tamil-font-history {
+  font-family: "Nunito", sans-serif;
+}
+
+/* small responsive tweaks */
+@media (max-width: 768px) {
+  .history-title { font-size: 1.25rem; }
+  .history-content { font-size: 0.95rem; }
+}

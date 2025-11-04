@@ -18,7 +18,7 @@
 .feedback {
   color: black;
   font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
+  font-size: 2rem !important;
 }
 
 .form-align{
