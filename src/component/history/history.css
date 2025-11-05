@@ -2,8 +2,9 @@
   .containerhistory
   {
     position:absolute;
-    top:20%;
+    top:16%;
     left:5%;
+    right: 5%;
   }
 
   .history-accordion{
@@ -72,4 +73,8 @@
 @media (max-width: 768px) {
   .history-title { font-size: 1.25rem; }
   .history-content { font-size: 0.95rem; }
+}
+
+.history-title{
+  color: #ff8c1a;
 }

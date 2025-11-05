@@ -25,7 +25,7 @@ const History = () => {
   const isTamil = i18n.language === 'ta';
 
   return (
-    <div className={`container containerhistory }`}>
+    <div className={`containerhistory`}>
       <h2 className={`history-title`}>{t('history') || 'History'}</h2>
 
       <Accordion defaultActiveKey="0" className="history-accordion mb-4">

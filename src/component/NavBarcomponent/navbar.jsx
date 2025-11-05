@@ -177,7 +177,7 @@ function NavbarComponent() {
                     align="end"
                   >
                     <NavDropdown.Item href="/history" className={location.pathname === '/history' ? 'active-link' : ''}>
-                      {t('Common Historys') || 'Common Historys'}
+                      {t('Temple history') || 'Temple history'}
                     </NavDropdown.Item>
                     <NavDropdown.Item href="/kammavar" className={location.pathname === '/kammavar' ? 'active-link' : ''}>
                       {t('Kammavar') || 'Kammavar'}
